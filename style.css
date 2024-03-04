@@ -1,41 +1,86 @@
-body {
-    background-color: bisque;
-    margin-top: 150px;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Anta", sans-serif;
+    box-sizing: border-box;
 }
 
-.container{
-    padding: 20px;
-    width: 300px;
-    margin: 0 auto;
-    background-color: beige;
-    border-radius: 25px;
-    box-shadow: 5px 5px 15px 3px #fff
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #f5f5f5);
+    padding: 10px;
 }
 
-form {
-    display: inline-block
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
 }
 
 input {
-    padding: 4px 15px 4px 5px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
 }
 
-#button {
-    display: inline-block;
-    background-color: #fff;
-    color: black;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 2px;
-    padding: 5px 15px;
-}
-
-#button:hover {
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #000000;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-    opacity: 0.8;
+    border-radius: 40px;
 }
 
-ul {padding-left: 20px; font-weight: bolder;}
-ul li {padding: 5px; color: black; font-weight: bolder; list-style: none;}
-ul li:nth-child(even){background-color: blanchedalmond; color:rgb(59, 56, 56)}
-.strike{text-decoration: line-through;}
+ul li {
+    list-style:decimal;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: 40px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.completed {
+    color: #555;
+    text-decoration: line-through;   
+}

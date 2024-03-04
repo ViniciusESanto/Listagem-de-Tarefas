@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>To-Do List!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <title>Lista de Tarefas!</title>
 </head>
 <body>
- <div class="container">
-    <h2>To-Do List</h2>
-        <input type="text" name="ListItem" placeholder="Adicionar tarefa">
-    <ul>
-        
-    </ul>
- </div>
+    <div class="container">
+        <div class="todo-app">
+            <h2>Lista de tarefas!</h2>
+            <div class="row">
+                <input type="text" name="input-box" placeholder="Adicionar tarefa">
+                <button>Add</button>
+            </div>
+            <ul id="taskList">
+            </ul>
+        </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="./main.js"></script>
